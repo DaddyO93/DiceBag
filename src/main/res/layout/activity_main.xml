@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3C1A6"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/d20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D20"
+        app:iconTint="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/d12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d20" />
+
+    <Button
+        android:id="@+id/d10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d12" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addItem"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="760dp"
+        android:clickable="true"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="135dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Additional Amount"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/additionalNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/additionalNumber"
+            android:layout_width="88dp"
+            android:layout_height="63dp"
+            android:height="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="152dp"
+        android:layout_height="247dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E91E1E"
+            android:text="Clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/runningTotal"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:width="50dp"
+            android:clickable="false"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/runningTotalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Running Total"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/runningTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saves"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/saveNumber2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="149dp"
+            android:layout_height="43dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+            <EditText
+                android:id="@+id/saveNumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="49dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/saveNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="49dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/saveNumber1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/saveNumber3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="49dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@+id/saveNumber2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="149dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/runningTotalText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/saveChip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="35dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/saveChip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="35dp"
+                app:layout_constraintStart_toEndOf="@+id/saveChip1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/saveChip3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="35dp"
+                app:layout_constraintStart_toEndOf="@+id/saveChip2"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <Button
+        android:id="@+id/d8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d10" />
+
+    <Button
+        android:id="@+id/d6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d8" />
+
+    <Button
+        android:id="@+id/d4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="80dp"
+        android:height="50dp"
+        android:backgroundTint="#FF5722"
+        android:text="D4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d6" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="139dp"
+        android:layout_height="171dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/resultTextArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Roll the Dice"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/rollResult"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/rollResult"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:height="50dp"
+            android:clickable="false"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="Modified Amount"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/modifiedNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/modifiedNumber"
+            android:layout_width="88dp"
+            android:layout_height="63dp"
+            android:height="50dp"
+            android:clickable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="number"
+            android:linksClickable="false"
+            android:longClickable="false"
+            android:selectAllOnFocus="false"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/resultTextArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
